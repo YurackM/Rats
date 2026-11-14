@@ -24,13 +24,11 @@ public class RatMovement : MonoBehaviour
     private void FixedUpdate()
     {
         velocity = direction * speed;
-        newPosition = position + (velocity * Time.fixedDeltaTime);
-        if(Vector3.Distance(newPosition, parent.transform.position) < tailLength){
-            Debug.Log(Vector3.Distance(newPosition, parent.transform.position));
-            position += (velocity * Time.fixedDeltaTime);
-            rat.MovePosition(position);
+        newPosition = transform.position + (velocity * Time.fixedDeltaTime);
+        Debug.Log(Vector3.Distance(newPosition, parent.transform.position));
+        if (Vector3.Distance(newPosition, parent.transform.position) < tailLength){          
+            rat.MovePosition(newPosition);
             isAtEnd = false;
-            //Debug.Log("move position");
         }
         else{
             isAtEnd = true;
