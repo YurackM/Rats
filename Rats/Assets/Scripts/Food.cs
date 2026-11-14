@@ -1,6 +1,17 @@
 using UnityEngine;
 
-public abstract class Food : MonoBehaviour
+public class Food : MonoBehaviour
 {
-    public abstract void Interact();
+    int foodType = 0;
+
+    public int FoodType
+    {
+        get { return foodType; }
+        set { foodType = value; }
+    }
+
+    public virtual void Interact()
+    {
+
+    }
 }
