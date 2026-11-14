@@ -9,59 +9,53 @@ public abstract class Agent : MonoBehaviour
 {
     protected Vector3 velocity, acceleration, position, totalForce, steer, wanderPoint, wanderPosition;
 
-    public float maxSpeed = 5f, maxForce = 3f, radius;
+    public float maxSpeed = 5f, maxForce = 3f, radius, tailLength;
     public double angle;
     protected Vector2 screenHalfSize;
-    public AgentSO agentSO;
+
+    public bool isAtEnd {get; set;}
+    public Vector3 direction {get; set;}
+    [SerializeField] GameObject parent;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         screenHalfSize.y = Camera.main.orthographicSize;
-
         screenHalfSize.x = screenHalfSize.y * Camera.main.aspect;
         wanderPosition = new Vector3(UnityEngine.Random.Range(-1f, 1f),
             UnityEngine.Random.Range(-1f, 1f), 0);
         angle = Math.Atan(wanderPosition.normalized.y / wanderPosition.normalized.x);
+        position = transform.position;
+        isAtEnd = false;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if(gameObject != null)
-        {
-            if (gameObject.CompareTag("Fox"))
-            {
-                // Zero out Acceleration from last frame
-                acceleration = Vector3.zero;
+        position = transform.position;
+        // Zero out Acceleration from last frame
+        acceleration = Vector3.zero;
 
-                // Add Steering force to Acceleration
-                acceleration += CalcSteering();
-                //Debug.Log("Move?");
-                gameObject.GetComponent<Rigidbody2D>().MovePosition(acceleration);
-            }
-            else
-            {
-                // Zero out Acceleration from last frame
-                acceleration = Vector3.zero;
+        // Add Steering force to Acceleration
+        acceleration += CalcSteering();
+        
+        // Clamp force
+        acceleration = Vector3.ClampMagnitude(acceleration, maxForce);
 
-                // Add Steering force to Acceleration
-                acceleration += CalcSteering();
+        steer = Vector3.ClampMagnitude(steer, maxForce);
 
-                // Clamp force
-                acceleration = Vector3.ClampMagnitude(acceleration, maxForce);
-
-                steer = Vector3.ClampMagnitude(steer, maxForce);
-
-                // Update Velocity with current Acceleration
-                velocity += acceleration * Time.deltaTime;
-                //  Move the agent with Velocity
-                transform.position += velocity * Time.deltaTime;
-            }
+        // Update Velocity with current Acceleration
+        velocity += acceleration * Time.deltaTime;
+        position += velocity * Time.deltaTime;
+        if (Vector3.Distance(position, parent.transform.position) < tailLength){          
+            gameObject.GetComponent<Rigidbody2D>().MovePosition(position);
+            isAtEnd = false;
         }
-        else
-        {
-            //Debug.Log("destroyed");
+        else{
+            isAtEnd = true;
         }
+
+        // //  Move the agent with Velocity
+        // transform.position += velocity * Time.deltaTime;
         
     }
 
@@ -129,7 +123,7 @@ public abstract class Agent : MonoBehaviour
     {
         // Calculate desired velocity
         Vector3 desiredDirection = targetPos - transform.position;
-
+        direction = desiredDirection.normalized;
         // Set desired = max speed
         Vector3 desiredVelocity = desiredDirection.normalized * maxSpeed;
 
@@ -160,18 +154,9 @@ public abstract class Agent : MonoBehaviour
         // that returned vector. 
         return Seek(target.transform.position);
     }
-    public Agent FindNearest()
+    private void OnDrawGizmos()
     {
-        float distance = math.INFINITY;
-        Agent tempAgent = null;
-        foreach (Agent a in agentSO.agents)
-        {
-            if((transform.position - a.transform.position).magnitude < distance)
-            {
-                distance = (transform.position - a.transform.position).magnitude;
-                tempAgent = a;
-            }
-        }
-        return tempAgent;
+        Gizmos.color = Color.blue;
+        Gizmos.DrawRay(transform.position, -direction);
     }
 }
