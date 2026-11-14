@@ -10,7 +10,7 @@ public class FoodSpawn : MonoBehaviour
     [SerializeField] Sprite pickle;
     [SerializeField] Sprite sushi;
     [SerializeField] Sprite wine;
-    List<GameObject> foodList = new List<GameObject>();
+    public List<GameObject> foodList = new List<GameObject>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
