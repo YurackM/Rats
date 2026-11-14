@@ -567,10 +567,10 @@
                 {
                     "name": "",
                     "id": "c62d3e0e-485f-4a2f-a469-0a23c872b216",
-                    "path": "",
+                    "path": "<Keyboard>/c",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Keyboard&Mouse",
                     "action": "Action1",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -578,10 +578,10 @@
                 {
                     "name": "",
                     "id": "bbc52ae4-b86a-4a45-8cf7-4c850f33edae",
-                    "path": "",
+                    "path": "<Keyboard>/v",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Keyboard&Mouse",
                     "action": "Action2",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -679,10 +679,10 @@
                 {
                     "name": "",
                     "id": "bf27ec63-2757-4330-81f2-55f23838b0d1",
-                    "path": "",
+                    "path": "<Keyboard>/comma",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Keyboard&Mouse",
                     "action": "Action1",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -690,10 +690,10 @@
                 {
                     "name": "",
                     "id": "5491d472-6063-4781-9e80-47ffbb3c5755",
-                    "path": "",
+                    "path": "<Keyboard>/period",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Keyboard&Mouse",
                     "action": "Action2",
                     "isComposite": false,
                     "isPartOfComposite": false
