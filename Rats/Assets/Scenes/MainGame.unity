@@ -131,8 +131,6 @@ GameObject:
   - component: {fileID: 201137848}
   - component: {fileID: 201137849}
   - component: {fileID: 201137850}
-  - component: {fileID: 201137851}
-  - component: {fileID: 201137852}
   m_Layer: 0
   m_Name: P2Rat
   m_TagString: Untagged
@@ -227,6 +225,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RatMovement
   speed: 2
+  tailLength: 5
+  parent: {fileID: 1432877087}
 --- !u!50 &201137850
 Rigidbody2D:
   serializedVersion: 5
@@ -254,57 +254,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &201137851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 201137846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea4ac32b529cc5944b5dfd3734a8e178, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RatsStuck
-  maxDistance: 2
-  parentTail: {fileID: 1432877087}
---- !u!70 &201137852
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 201137846}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0.0117862, y: -0.0000000014050244}
-  m_Size: {x: 0.5135738, y: 0.19000061}
-  m_Direction: 1
 --- !u!1 &475543824
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,8 +357,6 @@ GameObject:
   - component: {fileID: 672177288}
   - component: {fileID: 672177289}
   - component: {fileID: 672177290}
-  - component: {fileID: 672177291}
-  - component: {fileID: 672177292}
   m_Layer: 0
   m_Name: P1Rat
   m_TagString: Untagged
@@ -504,6 +451,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RatMovement
   speed: 2
+  tailLength: 5
+  parent: {fileID: 1432877087}
 --- !u!50 &672177290
 Rigidbody2D:
   serializedVersion: 5
@@ -531,57 +480,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &672177291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 672177286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea4ac32b529cc5944b5dfd3734a8e178, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RatsStuck
-  maxDistance: 2
-  parentTail: {fileID: 1432877087}
---- !u!70 &672177292
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 672177286}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: -0.009429265, y: 0.002357234}
-  m_Size: {x: 0.5560052, y: 0.2165548}
-  m_Direction: 1
 --- !u!1 &1432877087
 GameObject:
   m_ObjectHideFlags: 0
@@ -592,6 +490,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1432877089}
   - component: {fileID: 1432877088}
+  - component: {fileID: 1432877090}
+  - component: {fileID: 1432877091}
   m_Layer: 0
   m_Name: RatTailCollective
   m_TagString: Untagged
@@ -677,6 +577,48 @@ Transform:
   - {fileID: 201137847}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1432877090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432877087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76fcbb39f77afe145a175380ea9498d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RatKingMovement
+  speed: 2
+  rat1: {fileID: 672177286}
+  rat2: {fileID: 201137846}
+--- !u!50 &1432877091
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432877087}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1623551337
 GameObject:
   m_ObjectHideFlags: 0
