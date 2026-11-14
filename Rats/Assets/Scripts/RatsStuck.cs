@@ -17,5 +17,7 @@ public class RatsStuck : MonoBehaviour
         {
             Debug.Log("Pull Back");
         }
+
+        
     }
 }
