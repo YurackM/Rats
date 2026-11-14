@@ -27,15 +27,7 @@ public class RatKingMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        foreach(GameObject r in rats){
-            if(r.GetComponent<RatMovement>().isAtEnd){
-                move = true;
-            }
-        }
-        if(move){
-            Movement();
-            move = false;
-        }
+        Movement();
     }
 
     public void Movement(){
