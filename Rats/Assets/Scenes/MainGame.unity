@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 201137849}
   - component: {fileID: 201137850}
   - component: {fileID: 201137851}
+  - component: {fileID: 201137852}
   m_Layer: 0
   m_Name: P2Rat
   m_TagString: Untagged
@@ -267,6 +268,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RatsStuck
   maxDistance: 2
   parentTail: {fileID: 1432877087}
+--- !u!70 &201137852
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201137846}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.0117862, y: -0.0000000014050244}
+  m_Size: {x: 0.5135738, y: 0.19000061}
+  m_Direction: 1
 --- !u!1 &475543824
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,6 +409,7 @@ GameObject:
   - component: {fileID: 672177289}
   - component: {fileID: 672177290}
   - component: {fileID: 672177291}
+  - component: {fileID: 672177292}
   m_Layer: 0
   m_Name: P1Rat
   m_TagString: Untagged
@@ -506,6 +545,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RatsStuck
   maxDistance: 2
   parentTail: {fileID: 1432877087}
+--- !u!70 &672177292
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672177286}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.009429265, y: 0.002357234}
+  m_Size: {x: 0.5560052, y: 0.2165548}
+  m_Direction: 1
 --- !u!1 &1432877087
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,7 +667,7 @@ Transform:
   m_GameObject: {fileID: 1432877087}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.08, y: -1.24, z: 0}
+  m_LocalPosition: {x: -1.28, y: 1.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
