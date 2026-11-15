@@ -27,7 +27,7 @@ public class RatVisuals : MonoBehaviour
             {
                 spriteRend.sprite = spriteRight;
 
-                float xScale = (Vector2.Distance(transform.position, ratTailKnot.transform.position) - 1.5f) * 0.25f;
+                float xScale = (Vector2.Distance(transform.position, ratTailKnot.transform.position) - 1.6f) * 0.25f;
                 Vector3 currentScale = ratTail.transform.localScale;
                 currentScale.x = xScale;
                 ratTail.transform.localScale = currentScale;
@@ -42,7 +42,7 @@ public class RatVisuals : MonoBehaviour
             {
                 spriteRend.sprite = spriteLeft;
 
-                float xScale = (Vector2.Distance(transform.position, ratTailKnot.transform.position) - 1.5f) * 0.25f;
+                float xScale = (Vector2.Distance(transform.position, ratTailKnot.transform.position) - 1.6f) * 0.25f;
                 Vector3 currentScale = ratTail.transform.localScale;
                 currentScale.x = xScale;
                 ratTail.transform.localScale = currentScale;
@@ -61,7 +61,7 @@ public class RatVisuals : MonoBehaviour
             {
                 spriteRend.sprite = spriteUp;
 
-                float xScale = (Vector2.Distance(transform.position, ratTailKnot.transform.position) - 1.5f) * 0.25f;
+                float xScale = (Vector2.Distance(transform.position, ratTailKnot.transform.position) - 1.6f) * 0.25f;
                 Vector3 currentScale = ratTail.transform.localScale;
                 currentScale.x = xScale;
                 ratTail.transform.localScale = currentScale;
@@ -76,7 +76,7 @@ public class RatVisuals : MonoBehaviour
             {
                 spriteRend.sprite = spriteDown;
 
-                float xScale = (Vector2.Distance(transform.position, ratTailKnot.transform.position) - 1.5f) * 0.25f;
+                float xScale = (Vector2.Distance(transform.position, ratTailKnot.transform.position) - 1.6f) * 0.25f;
                 Vector3 currentScale = ratTail.transform.localScale;
                 currentScale.x = xScale;
                 ratTail.transform.localScale = currentScale;
