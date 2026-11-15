@@ -576,8 +576,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RatInteraction
   preferredFoodType: 0
---- !u!58 &475543830
-CircleCollider2D:
 --- !u!114 &475543830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -586,34 +584,6 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 475543824}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0.000000029802322, y: 0}
-  m_Radius: 0.245
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9c54d367674f4c438dcaf5cd001b25f, type: 3}
   m_Name: 
@@ -1818,9 +1788,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a756d6f5bbaee24abecd34b5f5af57f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RatInteraction
-  preferredFoodType: 0
---- !u!58 &1981120723
-CircleCollider2D:
   preferredFoodType: 1
 --- !u!114 &1981120723
 MonoBehaviour:
@@ -1830,34 +1797,6 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1981120717}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0.000000029802322, y: 0.000000059604645}
-  m_Radius: 0.245
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9c54d367674f4c438dcaf5cd001b25f, type: 3}
   m_Name: 
