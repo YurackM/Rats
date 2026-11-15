@@ -18,7 +18,7 @@ public abstract class Agent : MonoBehaviour
 
    public bool isAtEnd {get; set;}
    public Vector3 direction {get; set;}
-   [SerializeField] GameObject parent;
+   public GameObject parent;
    // Start is called once before the first execution of Update after the MonoBehaviour is created
    void Start()
    {
@@ -29,6 +29,7 @@ public abstract class Agent : MonoBehaviour
        angle = Math.Atan(wanderPosition.normalized.y / wanderPosition.normalized.x);
        position = transform.position;
        isAtEnd = false;
+       parent = transform.parent.gameObject;
    }
 
 
@@ -77,10 +78,10 @@ public abstract class Agent : MonoBehaviour
    {
        Vector3 force = Vector3.zero;
        // Check if out of bounds
-       if(transform.position.x < -3f ||
-           transform.position.x > 3f ||
-           transform.position.y > 2f ||
-           transform.position.y < -2f)
+       if(transform.position.x < -screenHalfSize.x ||
+            transform.position.x > screenHalfSize.x ||
+            transform.position.y > screenHalfSize.y ||
+            transform.position.y < -screenHalfSize.y)
        {
            force = Seek(Vector3.zero);
        }

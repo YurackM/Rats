@@ -15,14 +15,14 @@ public class AIRats : Agent
        List<GameObject> foods = foodspawn.foodList;
        List<GameObject> ratFood = new List<GameObject>();
        foreach(GameObject f in foods){
-           // if(f.GetComponent<Food>().FoodType == f.GetComponent<RatInteraction>().PreferredFoodType){
+            if(f.GetComponent<Food>().FoodType == gameObject.GetComponent<RatInteraction>().PreferredFoodType){
                if(f.transform.position.x < -screenHalfSize.x ||
                    f.transform.position.x > screenHalfSize.x ||
                    f.transform.position.y > screenHalfSize.y ||
                    f.transform.position.y < -screenHalfSize.y){
                    ratFood.Add(f);
                }
-           // }
+           }
        }
 
 
@@ -41,7 +41,6 @@ public class AIRats : Agent
        else{
            totalForce += Wander(time, circleRadius) * wanderWeight;
        }
-
 
        totalForce += CheckBounds(0f) * boundsWeight;
        return totalForce;
