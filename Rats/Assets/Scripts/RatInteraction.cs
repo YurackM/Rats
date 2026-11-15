@@ -12,7 +12,7 @@ public class RatInteraction : MonoBehaviour
     private bool eating;
     private float eatTimer;
 
-    public int PreferredFoodType { get; }
+    public int PreferredFoodType { get{return preferredFoodType;} }
 
     void Update()
     {
