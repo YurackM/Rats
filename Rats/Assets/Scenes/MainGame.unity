@@ -2051,7 +2051,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RatHygiene
   hygieneBar: {fileID: 904050725}
   currentHygiene: 0
-  maxHygiene: 100
+  maxHygiene: 400
 --- !u!1 &212823424
 GameObject:
   m_ObjectHideFlags: 0
@@ -2416,7 +2416,7 @@ GameObject:
   - component: {fileID: 475543834}
   m_Layer: 0
   m_Name: AI1Rat
-  m_TagString: Rat
+  m_TagString: AIRat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2643,7 +2643,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RatHygiene
   hygieneBar: {fileID: 904050725}
   currentHygiene: 0
-  maxHygiene: 100
+  maxHygiene: 400
 --- !u!114 &475543834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2893,7 +2893,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RatHygiene
   hygieneBar: {fileID: 904050725}
   currentHygiene: 0
-  maxHygiene: 100
+  maxHygiene: 400
 --- !u!1 &860377306
 GameObject:
   m_ObjectHideFlags: 0
@@ -113154,7 +113154,19 @@ MonoBehaviour:
     m_ActionId: 77c4d5ca-b12a-41c7-9ab9-c32ca08bd2d2
     m_ActionName: 'Player1/Action1[/Keyboard/c]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 672177291}
+        m_TargetAssemblyTypeName: RatInteraction, Assembly-CSharp
+        m_MethodName: Clean
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 22dfd590-7b2d-447f-9f99-dcf5a45a950c
     m_ActionName: 'Player1/Action2[/Keyboard/v]'
   - m_PersistentCalls:
@@ -113190,7 +113202,19 @@ MonoBehaviour:
     m_ActionId: f705e206-e008-4072-bf02-9a5fe3f7c5e6
     m_ActionName: 'Player2/Action1[/Keyboard/comma]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 201137852}
+        m_TargetAssemblyTypeName: RatInteraction, Assembly-CSharp
+        m_MethodName: Clean
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: d5cf9237-733c-4a9e-a3e9-42df37d60a41
     m_ActionName: 'Player2/Action2[/Keyboard/period]'
   - m_PersistentCalls:
@@ -114896,7 +114920,7 @@ GameObject:
   - component: {fileID: 1981120727}
   m_Layer: 0
   m_Name: AI2Rat
-  m_TagString: Rat
+  m_TagString: AIRat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115123,7 +115147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RatHygiene
   hygieneBar: {fileID: 904050725}
   currentHygiene: 0
-  maxHygiene: 100
+  maxHygiene: 400
 --- !u!114 &1981120727
 MonoBehaviour:
   m_ObjectHideFlags: 0
