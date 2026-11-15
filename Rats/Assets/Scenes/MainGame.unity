@@ -119,191 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &11953130
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 11953131}
-  - component: {fileID: 11953133}
-  - component: {fileID: 11953132}
-  m_Layer: 5
-  m_Name: Border AI 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &11953131
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 11953130}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 90}
-  m_LocalScale: {x: 0.022222223, y: 0.022222223, z: 0.022222223}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 25458289}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.09866333, y: -0.44613647}
-  m_SizeDelta: {x: 63, y: 11}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &11953132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 11953130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 3533116368258538092, guid: 4d79161d2286f4b47bc0dc6f34503c65, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &11953133
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 11953130}
-  m_CullTransparentMesh: 1
---- !u!1 &25458288
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 25458289}
-  m_Layer: 0
-  m_Name: HungerBars
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &25458289
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 25458288}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -347.5, y: 168.17625, z: -4050}
-  m_LocalScale: {x: 45, y: 45, z: 45}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 849275643}
-  - {fileID: 44791704}
-  - {fileID: 802293863}
-  - {fileID: 11953131}
-  m_Father: {fileID: 783613269}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &44791703
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 44791704}
-  - component: {fileID: 44791706}
-  - component: {fileID: 44791705}
-  m_Layer: 5
-  m_Name: Border P2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &44791704
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 44791703}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 90}
-  m_LocalScale: {x: 0.022222223, y: 0.022222223, z: 0.022222223}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 25458289}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.09866333, y: 0.18276978}
-  m_SizeDelta: {x: 63, y: 11}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &44791705
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 44791703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 3533116368258538092, guid: 4d79161d2286f4b47bc0dc6f34503c65, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &44791706
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 44791703}
-  m_CullTransparentMesh: 1
 --- !u!1 &201137846
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,12 +132,15 @@ GameObject:
   - component: {fileID: 201137849}
   - component: {fileID: 201137850}
 <<<<<<< HEAD
+<<<<<<< HEAD
   - component: {fileID: 201137851}
 =======
   - component: {fileID: 201137852}
   - component: {fileID: 201137851}
   - component: {fileID: 201137853}
 >>>>>>> main
+=======
+>>>>>>> parent of 353e306 (HungerBar)
   m_Layer: 0
   m_Name: P2Rat
   m_TagString: Untagged
@@ -447,6 +265,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!114 &201137851
 =======
@@ -790,6 +609,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
 >>>>>>> main
+=======
+>>>>>>> parent of 353e306 (HungerBar)
 --- !u!1 &475543824
 GameObject:
   m_ObjectHideFlags: 0
@@ -803,7 +624,6 @@ GameObject:
   - component: {fileID: 475543827}
   - component: {fileID: 475543828}
   - component: {fileID: 475543829}
-  - component: {fileID: 475543830}
   m_Layer: 0
   m_Name: AI1Rat
   m_TagString: Untagged
@@ -950,6 +770,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RatInteraction
   preferredFoodType: 0
+<<<<<<< HEAD
 --- !u!114 &475543830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1155,6 +976,8 @@ CanvasRenderer:
   spriteDown: {fileID: -8521223975913529868, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
   spriteUp: {fileID: 6985044613146471436, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
 >>>>>>> main
+=======
+>>>>>>> parent of 353e306 (HungerBar)
 --- !u!1 &672177286
 GameObject:
   m_ObjectHideFlags: 0
@@ -1169,7 +992,6 @@ GameObject:
   - component: {fileID: 672177290}
   - component: {fileID: 672177291}
   - component: {fileID: 672177292}
-  - component: {fileID: 672177293}
   m_Layer: 0
   m_Name: P1Rat
   m_TagString: Untagged
@@ -1343,6 +1165,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0.000000014901161}
   m_Radius: 0.245
+<<<<<<< HEAD
 --- !u!114 &672177293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2112,6 +1935,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
 >>>>>>> main
+=======
+>>>>>>> parent of 353e306 (HungerBar)
 --- !u!1 &1432877087
 GameObject:
   m_ObjectHideFlags: 0
@@ -2306,95 +2131,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1489957050
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1489957051}
-  - component: {fileID: 1489957054}
-  - component: {fileID: 1489957053}
-  - component: {fileID: 1489957052}
-  m_Layer: 5
-  m_Name: Fill P2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1489957051
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1489957050}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 90}
-  m_LocalScale: {x: 0.022222223, y: 0.022222223, z: 0.022222223}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 348424241}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.18533325, y: 0.1960907}
-  m_SizeDelta: {x: 61, y: 8}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1489957052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1489957050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ec13cdf31694410eab94daeaab54edc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HungerBar
-  fillImage: {fileID: 1489957053}
---- !u!114 &1489957053
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1489957050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.5276789, g: 0.5367972, b: 0.9245283, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 1618141565392261821, guid: 4d79161d2286f4b47bc0dc6f34503c65, type: 3}
-  m_Type: 3
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 0
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1489957054
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1489957050}
-  m_CullTransparentMesh: 1
 --- !u!1 &1623551337
 GameObject:
   m_ObjectHideFlags: 0
@@ -2757,95 +2493,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1935472477
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1935472478}
-  - component: {fileID: 1935472481}
-  - component: {fileID: 1935472480}
-  - component: {fileID: 1935472479}
-  m_Layer: 5
-  m_Name: Fill AI 1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1935472478
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1935472477}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 90}
-  m_LocalScale: {x: 0.022222223, y: 0.022222223, z: 0.022222223}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 348424241}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.18533325, y: -0.12612915}
-  m_SizeDelta: {x: 61, y: 8}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1935472479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1935472477}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ec13cdf31694410eab94daeaab54edc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HungerBar
-  fillImage: {fileID: 1935472480}
---- !u!114 &1935472480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1935472477}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.8741453, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 1618141565392261821, guid: 4d79161d2286f4b47bc0dc6f34503c65, type: 3}
-  m_Type: 3
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 0
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1935472481
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1935472477}
-  m_CullTransparentMesh: 1
 --- !u!1 &1981120717
 GameObject:
   m_ObjectHideFlags: 0
@@ -2859,7 +2506,6 @@ GameObject:
   - component: {fileID: 1981120720}
   - component: {fileID: 1981120721}
   - component: {fileID: 1981120722}
-  - component: {fileID: 1981120723}
   m_Layer: 0
   m_Name: AI2Rat
   m_TagString: Untagged
@@ -3007,6 +2653,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RatInteraction
 <<<<<<< HEAD
   preferredFoodType: 0
+<<<<<<< HEAD
 =======
   preferredFoodType: 1
 >>>>>>> main
@@ -3037,6 +2684,8 @@ MonoBehaviour:
   spriteDown: {fileID: 8393210268740700682, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
   spriteUp: {fileID: 3075253522793115060, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
 >>>>>>> main
+=======
+>>>>>>> parent of 353e306 (HungerBar)
 --- !u!1 &2073292541
 GameObject:
   m_ObjectHideFlags: 0
@@ -3195,5 +2844,3 @@ SceneRoots:
   - {fileID: 2073292543}
   - {fileID: 8141603166961950450}
   - {fileID: 1462455028}
-  - {fileID: 783613269}
-  - {fileID: 1098567710}
