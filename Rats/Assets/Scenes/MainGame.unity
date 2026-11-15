@@ -947,6 +947,7 @@ GameObject:
   - component: {fileID: 475543831}
   - component: {fileID: 475543832}
   - component: {fileID: 475543833}
+  - component: {fileID: 475543834}
   m_Layer: 0
   m_Name: AI1Rat
   m_TagString: Rat
@@ -1177,6 +1178,15 @@ MonoBehaviour:
   hygieneBar: {fileID: 904050725}
   currentHygiene: 0
   maxHygiene: 100
+--- !u!114 &475543834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475543824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31c14ac5adb30244b998bb729549fd07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AIRatsVisable
@@ -3049,6 +3059,7 @@ GameObject:
   - component: {fileID: 1981120724}
   - component: {fileID: 1981120725}
   - component: {fileID: 1981120726}
+  - component: {fileID: 1981120727}
   m_Layer: 0
   m_Name: AI2Rat
   m_TagString: Rat
@@ -3279,6 +3290,15 @@ MonoBehaviour:
   hygieneBar: {fileID: 904050725}
   currentHygiene: 0
   maxHygiene: 100
+--- !u!114 &1981120727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981120717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31c14ac5adb30244b998bb729549fd07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AIRatsVisable
