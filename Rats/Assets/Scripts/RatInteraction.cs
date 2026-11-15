@@ -65,15 +65,12 @@ public class RatInteraction : MonoBehaviour
         if (eating)
         {
             eatTimer += Time.deltaTime;
-            fillFood.enabled = true;
             if (eatTimer > 1f){
                 EatFood();
-                fillFood.enabled = false;
             }
         }
         else
         {
-            fillFood.enabled = false;
             eatTimer = 0f;
         }
 

@@ -2117,7 +2117,7 @@ MonoBehaviour:
   spriteRight: {fileID: -6634116148799303890, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
   spriteDown: {fileID: 3105829354580746627, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
   spriteUp: {fileID: -3711905800642194886, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
-  blood: {fileID: 0}
+  blood: {fileID: 1591548734}
 --- !u!114 &201137854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2784,7 +2784,7 @@ MonoBehaviour:
   spriteRight: {fileID: 3684886580728248886, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
   spriteDown: {fileID: -8521223975913529868, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
   spriteUp: {fileID: 6985044613146471436, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
-  blood: {fileID: 0}
+  blood: {fileID: 1305702587}
 --- !u!58 &475543831
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3192,7 +3192,7 @@ MonoBehaviour:
   spriteRight: {fileID: 7016425611973404001, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
   spriteDown: {fileID: 623412340929106530, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
   spriteUp: {fileID: -3703038530465135702, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
-  blood: {fileID: 0}
+  blood: {fileID: 1868723568}
 --- !u!114 &672177294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3266,7 +3266,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 721226874}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalPosition: {x: 0, y: 0, z: 5400}
   m_LocalScale: {x: 1, y: 1, z: 0.2}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3370,7 +3370,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 855487458}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalPosition: {x: 0, y: 0, z: 5400}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -112364,7 +112364,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1008640566}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalPosition: {x: 0, y: 0, z: 5400}
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -116020,7 +116020,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840610763}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalPosition: {x: 0, y: 0, z: 5400}
   m_LocalScale: {x: 1, y: 1, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -116509,7 +116509,7 @@ MonoBehaviour:
   spriteRight: {fileID: 7538499987627416870, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
   spriteDown: {fileID: 8393210268740700682, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
   spriteUp: {fileID: 3075253522793115060, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
-  blood: {fileID: 0}
+  blood: {fileID: 302446658}
 --- !u!58 &1981120724
 CircleCollider2D:
   m_ObjectHideFlags: 0

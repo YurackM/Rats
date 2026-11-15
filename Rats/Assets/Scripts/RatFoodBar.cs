@@ -8,7 +8,7 @@ public class RatFoodBar : MonoBehaviour
    // Start is called once before the first execution of Update after the MonoBehaviour is created
    void Start()
    {
-       currentFood = maxFood;
+       currentFood = 0;
        foodBar.UpdateFoodBar(currentFood, maxFood);
    }
 
