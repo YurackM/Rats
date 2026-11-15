@@ -3,6 +3,7 @@ using UnityEngine;
 public class RatVisuals : MonoBehaviour
 {
     [SerializeField]GameObject ratTailKnot;
+    [SerializeField]GameObject ratTail;
     [SerializeField]Sprite spriteLeft;
     [SerializeField] Sprite spriteRight;
     [SerializeField] Sprite spriteDown;
@@ -25,10 +26,32 @@ public class RatVisuals : MonoBehaviour
             if(lookAngle.x > 0)
             {
                 spriteRend.sprite = spriteRight;
+
+                float xScale = (Vector2.Distance(transform.position, ratTailKnot.transform.position) - 1.5f) * 0.25f;
+                Vector3 currentScale = ratTail.transform.localScale;
+                currentScale.x = xScale;
+                ratTail.transform.localScale = currentScale;
+
+                ratTail.transform.position = transform.position - (transform.localPosition / 2f);
+
+                Vector3 angleFacing = ratTail.transform.rotation * new Vector3(1, 0, 0);
+                Quaternion rotationNeeded = Quaternion.FromToRotation(angleFacing, transform.localPosition.normalized);
+                ratTail.transform.rotation = rotationNeeded * ratTail.transform.rotation;
             }
             else
             {
                 spriteRend.sprite = spriteLeft;
+
+                float xScale = (Vector2.Distance(transform.position, ratTailKnot.transform.position) - 1.5f) * 0.25f;
+                Vector3 currentScale = ratTail.transform.localScale;
+                currentScale.x = xScale;
+                ratTail.transform.localScale = currentScale;
+
+                ratTail.transform.position = transform.position - (transform.localPosition / 2f);
+
+                Vector3 angleFacing = ratTail.transform.rotation * new Vector3(1, 0, 0);
+                Quaternion rotationNeeded = Quaternion.FromToRotation(angleFacing, transform.localPosition.normalized);
+                ratTail.transform.rotation = rotationNeeded * ratTail.transform.rotation;
             }
 
         }
@@ -37,10 +60,32 @@ public class RatVisuals : MonoBehaviour
             if(lookAngle.y > 0)
             {
                 spriteRend.sprite = spriteUp;
+
+                float xScale = (Vector2.Distance(transform.position, ratTailKnot.transform.position) - 1.5f) * 0.25f;
+                Vector3 currentScale = ratTail.transform.localScale;
+                currentScale.x = xScale;
+                ratTail.transform.localScale = currentScale;
+
+                ratTail.transform.position = transform.position - (transform.localPosition / 2f);
+
+                Vector3 angleFacing = ratTail.transform.rotation * new Vector3(1, 0, 0);
+                Quaternion rotationNeeded = Quaternion.FromToRotation(angleFacing, transform.localPosition.normalized);
+                ratTail.transform.rotation = rotationNeeded * ratTail.transform.rotation;
             }
             else
             {
                 spriteRend.sprite = spriteDown;
+
+                float xScale = (Vector2.Distance(transform.position, ratTailKnot.transform.position) - 1.5f) * 0.25f;
+                Vector3 currentScale = ratTail.transform.localScale;
+                currentScale.x = xScale;
+                ratTail.transform.localScale = currentScale;
+
+                ratTail.transform.position = transform.position - (transform.localPosition / 2f);
+
+                Vector3 angleFacing = ratTail.transform.rotation * new Vector3(1, 0, 0);
+                Quaternion rotationNeeded = Quaternion.FromToRotation(angleFacing, transform.localPosition.normalized);
+                ratTail.transform.rotation = rotationNeeded * ratTail.transform.rotation;
             }
         }
     }
