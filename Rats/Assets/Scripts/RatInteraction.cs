@@ -9,7 +9,7 @@ public class RatInteraction : MonoBehaviour
     private float timer = 0f;
     private bool inRange;
     private bool isDead;
-    private int fullness = 100;
+    private float currentHunger = 100;
     private List<Food> nearbyFoods = new List<Food>();
     private Food nearestFood;
     private bool eating;
@@ -20,6 +20,7 @@ public class RatInteraction : MonoBehaviour
 
     public bool IsDead { get { return isDead; } }
     public int PreferredFoodType { get{return preferredFoodType;} }
+    public float CurrentHunger {get{return currentHunger;}}
 
     void Update()
     {
@@ -31,7 +32,7 @@ public class RatInteraction : MonoBehaviour
         if (timer > 0.3f)
         {
             timer -= 0.3f;
-            fullness--;
+            currentHunger--;
             //cleanliness--;
         }
 
@@ -75,7 +76,7 @@ public class RatInteraction : MonoBehaviour
         //}
 
         // Life check
-        if (fullness <= 0)
+        if (currentHunger <= 0)
             isDead = true;
     }
 
@@ -93,10 +94,10 @@ public class RatInteraction : MonoBehaviour
     private void EatFood()
     {
         if (nearestFood.FoodType == preferredFoodType)
-            fullness += 10;
+            currentHunger += 10;
         else
         {
-            fullness -= 3;
+            currentHunger -= 3;
         }
         Destroy(nearestFood.gameObject);
         eating = false;
