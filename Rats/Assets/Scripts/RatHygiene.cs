@@ -4,7 +4,7 @@ public class RatHygiene : MonoBehaviour
 {
    [SerializeField] HygieneBar hygieneBar;
    [SerializeField] float currentHygiene;
-   [SerializeField] float maxHygiene = 400;
+   [SerializeField] float maxHygiene = 100;
    // Start is called once before the first execution of Update after the MonoBehaviour is created
    void Start()
    {

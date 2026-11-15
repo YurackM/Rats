@@ -7,16 +7,14 @@ public class RatInteraction : MonoBehaviour
     [SerializeField]
     private int preferredFoodType;
     private float timer = 0f;
-    private bool inEatingRange;
-    private bool inCleaningRange;
+    private bool inRange;
     private bool isDead;
     private float currentHunger = 100;
     private List<Food> nearbyFoods = new List<Food>();
     private Food nearestFood;
     private bool eating;
     private float eatTimer;
-    private static int cleanliness = 400;
-    private List<Collider2D> nearbyRats = new List<Collider2D>();
+    private int cleanliness = 100;
     private bool cleaning;
     private float cleanTimer;
 
@@ -71,18 +69,12 @@ public class RatInteraction : MonoBehaviour
         {
             cleanTimer += Time.deltaTime;
             if (cleanTimer > 0.5f)
-                CleanRat();
+                EatFood();
         }
         else
         {
             cleanTimer = 0f;
         }
-
-        // Limiting variables
-        if (currentHunger > 100)
-            currentHunger = 100;
-        if (cleanliness > 400)
-            cleanliness = 400;
 
         // Life check
         if (currentHunger <= 0 || cleanliness <= 0)
@@ -94,38 +86,9 @@ public class RatInteraction : MonoBehaviour
         if (collision.gameObject.CompareTag("Food"))
         {
             nearbyFoods.Add(collision.gameObject.GetComponent<Food>());
-            inEatingRange = true;
+            inRange = true;
             if (nearbyFoods.Count == 1)
                 nearestFood = nearbyFoods[0];
-        }
-
-        else if (collision.gameObject.CompareTag("Rat") || collision.gameObject.CompareTag("AIRat"))
-        {
-            nearbyRats.Add(collision.gameObject.GetComponent<Collider2D>());
-            inCleaningRange = true;
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Food"))
-        {
-            nearbyFoods.Remove(collision.gameObject.GetComponent<Food>());
-        }
-            //if (collision.gameObject.GetComponent<Food>() == nearestFood)
-
-        if (nearbyFoods.Count == 0)
-        {
-            nearestFood = null;
-            inEatingRange = false;
-            eating = false;
-        }
-
-        if (collision.gameObject.CompareTag("Rat") || collision.gameObject.CompareTag("AIRat"))
-        {
-            nearbyRats.Remove(collision.gameObject.GetComponent<Collider2D>());
-            inCleaningRange = false;
-            cleaning = false;
         }
     }
 
@@ -141,16 +104,26 @@ public class RatInteraction : MonoBehaviour
         eating = false;
     }
 
-    private void CleanRat()
+    private void OnCollisionExit2D(Collision2D collision)
     {
-        cleanliness += 60;
-        cleaning = false;
+        if (collision.gameObject.CompareTag("Food"))
+        {
+            nearbyFoods.Remove(collision.gameObject.GetComponent<Food>());
+        }
+            //if (collision.gameObject.GetComponent<Food>() == nearestFood)
+
+        if (nearbyFoods.Count == 0)
+        {
+            nearestFood = null;
+            inRange = false;
+            eating = false;
+        }
     }
 
 
     public void Eat(InputAction.CallbackContext ctx)
     {
-        if (!(inEatingRange && ctx.started || eating))
+        if (!(inRange && ctx.started || eating))
             return;
         if (ctx.started)
             eating = true;
@@ -160,7 +133,7 @@ public class RatInteraction : MonoBehaviour
 
     public void Clean(InputAction.CallbackContext ctx)
     {
-        if (!(inCleaningRange && ctx.started || cleaning))
+        if (!(inRange && ctx.started || cleaning))
             return;
         if (ctx.started)
             cleaning = true;

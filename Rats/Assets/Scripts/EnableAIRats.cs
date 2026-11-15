@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class EnableAIRats : MonoBehaviour
 {
-    public static bool enableAIRats = true;
+    public static bool enableAIRats;
     public TMP_Text text;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
