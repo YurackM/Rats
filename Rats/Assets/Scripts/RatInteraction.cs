@@ -64,11 +64,8 @@ public class RatInteraction : MonoBehaviour
             eatTimer = 0f;
         }
 
-        //}
-        //else
-        //{
-        //    cleanTimer = 0f;
-        //}
+        // Cleaning
+        if (cleaning)
         {
             cleanTimer += Time.deltaTime;
             if (cleanTimer > 0.5f)
