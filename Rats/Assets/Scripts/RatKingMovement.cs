@@ -51,15 +51,22 @@ public class RatKingMovement : MonoBehaviour
                 averageDirection += r.GetComponent<RatMovement>().direction;
             }
         }
-        foreach(GameObject ai in aiRats){
-            if(ai.GetComponent<Agent>().isAtEnd){
-                Vector3 aiDirection = -ai.GetComponent<Agent>().direction;
+        foreach (GameObject ai in aiRats)
+        {
+            if (ai.GetComponent<Agent>().isAtEnd)
+            {
+                Vector3 aiDirection = ai.GetComponent<Agent>().direction;
                 averageDirection += aiDirection * aiWeight;
             }
         }
-        
+
         velocity = averageDirection.normalized * speed;
-        position += (velocity * Time.fixedDeltaTime);
+        position = transform.position + (velocity * Time.fixedDeltaTime);
         ratKing.MovePosition(position);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawLine(transform.position, transform.position + velocity);
     }
 }

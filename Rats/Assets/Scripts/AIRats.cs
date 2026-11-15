@@ -16,17 +16,17 @@ public class AIRats : Agent
        List<GameObject> ratFood = new List<GameObject>();
        foreach(GameObject f in foods){
             if(f.GetComponent<Food>().FoodType == gameObject.GetComponent<RatInteraction>().PreferredFoodType){
-               if(f.transform.position.x < -screenHalfSize.x ||
-                   f.transform.position.x > screenHalfSize.x ||
-                   f.transform.position.y > screenHalfSize.y ||
-                   f.transform.position.y < -screenHalfSize.y){
+               if(f.transform.position.x > -screenHalfSize.x + transform.position.x &&
+                   f.transform.position.x < screenHalfSize.x + transform.position.x &&
+                   f.transform.position.y < screenHalfSize.y + transform.position.y &&
+                   f.transform.position.y > -screenHalfSize.y + transform.position.y){
                    ratFood.Add(f);
-               }
+                }
            }
        }
 
 
-       float nearestDistance = 1000000000;
+       float nearestDistance = float.MaxValue;
        GameObject nearestFood = null;
        foreach(GameObject f in ratFood){
            if(nearestDistance > Vector3.Distance(f.transform.position, transform.position)){
@@ -37,15 +37,19 @@ public class AIRats : Agent
        if(nearestFood != null)
        {
            totalForce += Seek(nearestFood) * seekWeight;
-       }   
-       else{
-           totalForce += Wander(time, circleRadius) * wanderWeight;
-       }
+           //Debug.Log(nearestFood.transform.position);
+        }
+        else
+        {
+            totalForce += Wander(time, circleRadius) * wanderWeight;
+        }
 
-       totalForce += CheckBounds(0f) * boundsWeight;
-       return totalForce;
+        return totalForce;
    }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawLine(transform.position, transform.position + direction);
+    }
 
-  
 }
