@@ -855,6 +855,7 @@ GameObject:
   - component: {fileID: 475543830}
   - component: {fileID: 475543831}
   - component: {fileID: 475543832}
+  - component: {fileID: 475543833}
   m_Layer: 0
   m_Name: AI1Rat
   m_TagString: Rat
@@ -944,7 +945,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 475543824}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01e62155d2537c144afe79500101a742, type: 3}
   m_Name: 
@@ -1070,6 +1071,18 @@ MonoBehaviour:
   hungerBar: {fileID: 2098209363}
   currentHunger: 0
   maxHunger: 100
+--- !u!114 &475543833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475543824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31c14ac5adb30244b998bb729549fd07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AIRatsVisable
 --- !u!1 &672177286
 GameObject:
   m_ObjectHideFlags: 0
@@ -2831,6 +2844,7 @@ GameObject:
   - component: {fileID: 1981120723}
   - component: {fileID: 1981120724}
   - component: {fileID: 1981120725}
+  - component: {fileID: 1981120726}
   m_Layer: 0
   m_Name: AI2Rat
   m_TagString: Rat
@@ -2920,7 +2934,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1981120717}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01e62155d2537c144afe79500101a742, type: 3}
   m_Name: 
@@ -3046,6 +3060,18 @@ MonoBehaviour:
   hungerBar: {fileID: 212823428}
   currentHunger: 0
   maxHunger: 100
+--- !u!114 &1981120726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981120717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31c14ac5adb30244b998bb729549fd07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AIRatsVisable
 --- !u!1 &2073292541
 GameObject:
   m_ObjectHideFlags: 0
