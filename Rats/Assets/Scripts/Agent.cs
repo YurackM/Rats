@@ -45,7 +45,7 @@ public abstract class Agent : MonoBehaviour
        acceleration += CalcSteering();
       
        // Clamp force
-       acceleration = Vector3.ClampMagnitude(acceleration, maxForce);
+       acceleration = Vector3.ClampMagnitude(acceleration, maxSpeed);
 
 
        steer = Vector3.ClampMagnitude(steer, maxForce);
