@@ -6,25 +6,36 @@ public class RatInteraction : MonoBehaviour
 {
     [SerializeField]
     private int preferredFoodType;
-    private int fullness = 100;
     private float timer = 0f;
     private bool inRange;
+    private bool isDead;
+    private int fullness = 100;
     private List<Food> nearbyFoods = new List<Food>();
     private Food nearestFood;
     private bool eating;
     private float eatTimer;
+    //private int cleanliness = 100;
+    //private bool cleaning;
+    //private float cleanTimer;
 
+    public bool IsDead { get { return isDead; } }
     public int PreferredFoodType { get{return preferredFoodType;} }
 
     void Update()
     {
+        if (isDead)
+            return;
+
+        // Timer
         timer += Time.deltaTime;
-        if (timer > 0.2f)
+        if (timer > 0.3f)
         {
-            timer -= 0.2f;
+            timer -= 0.3f;
             fullness--;
+            //cleanliness--;
         }
 
+        // Nearest Food
         if (nearbyFoods.Count > 0)
         {
             foreach (Food f in nearbyFoods)
@@ -39,6 +50,7 @@ public class RatInteraction : MonoBehaviour
             }
         }
 
+        // Eating food
         if (eating)
         {
             eatTimer += Time.deltaTime;
@@ -49,6 +61,22 @@ public class RatInteraction : MonoBehaviour
         {
             eatTimer = 0f;
         }
+
+        //// Cleaning
+        //if (cleaning)
+        //{
+        //    cleanTimer += Time.deltaTime;
+        //    if (cleanTimer > 0.5f)
+        //        EatFood();
+        //}
+        //else
+        //{
+        //    cleanTimer = 0f;
+        //}
+
+        // Life check
+        if (fullness <= 0)
+            isDead = true;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
