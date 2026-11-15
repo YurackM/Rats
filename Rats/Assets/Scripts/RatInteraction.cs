@@ -25,6 +25,11 @@ public class RatInteraction : MonoBehaviour
     public float CurrentHunger {get{return currentHunger;}}
     public float CurrentCleanliness { get { return cleanliness; } }
 
+    void Start()
+    {
+        cleanliness = 400;
+    }
+
     void Update()
     {
         if (isDead)
@@ -97,6 +102,10 @@ public class RatInteraction : MonoBehaviour
             inEatingRange = true;
             if (nearbyFoods.Count == 1)
                 nearestFood = nearbyFoods[0];
+            if (gameObject.CompareTag("AIRat"))
+            {
+                EatFood();
+            }
         }
 
         else if (collision.gameObject.CompareTag("Rat") || collision.gameObject.CompareTag("AIRat"))
