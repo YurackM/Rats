@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class RatInteraction : MonoBehaviour
 {
     [SerializeField] Image fillFood;
-    private int preferredFoodType;
+    [SerializeField] private int preferredFoodType;
     private float timer = 0f;
     private bool inEatingRange;
     private bool inCleaningRange;
@@ -73,7 +73,7 @@ public class RatInteraction : MonoBehaviour
         }
         else
         {
-            //fillFood.enabled = false;
+            fillFood.enabled = false;
             eatTimer = 0f;
         }
 
