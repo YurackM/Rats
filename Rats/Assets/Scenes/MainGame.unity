@@ -119,6 +119,81 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &42222945
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 42222946}
+  - component: {fileID: 42222948}
+  - component: {fileID: 42222947}
+  m_Layer: 5
+  m_Name: HygieneBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &42222946
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42222945}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 7, y: 2, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 860377310}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -206}
+  m_SizeDelta: {x: 82, y: 11}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &42222947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42222945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.87058824}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 6707965084828699773, guid: 399d6e32238f07f499b2aac4109ebc34, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &42222948
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42222945}
+  m_CullTransparentMesh: 1
 --- !u!1 &50186713
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,6 +364,7 @@ GameObject:
   - component: {fileID: 201137851}
   - component: {fileID: 201137853}
   - component: {fileID: 201137854}
+  - component: {fileID: 201137855}
   m_Layer: 0
   m_Name: P2Rat
   m_TagString: Rat
@@ -495,6 +571,21 @@ MonoBehaviour:
   hungerBar: {fileID: 1595518095}
   currentHunger: 0
   maxHunger: 100
+--- !u!114 &201137855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201137846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eb71a0d2f3b94752afcc38599259a30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RatHygiene
+  hygieneBar: {fileID: 904050725}
+  currentHygiene: 0
+  maxHygiene: 100
 --- !u!1 &212823424
 GameObject:
   m_ObjectHideFlags: 0
@@ -1080,6 +1171,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 475543824}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eb71a0d2f3b94752afcc38599259a30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RatHygiene
+  hygieneBar: {fileID: 904050725}
+  currentHygiene: 0
+  maxHygiene: 100
   m_Script: {fileID: 11500000, guid: 31c14ac5adb30244b998bb729549fd07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AIRatsVisable
@@ -1099,6 +1196,7 @@ GameObject:
   - component: {fileID: 672177292}
   - component: {fileID: 672177293}
   - component: {fileID: 672177294}
+  - component: {fileID: 672177295}
   m_Layer: 0
   m_Name: P1Rat
   m_TagString: Rat
@@ -1305,6 +1403,21 @@ MonoBehaviour:
   hungerBar: {fileID: 458795694}
   currentHunger: 0
   maxHunger: 100
+--- !u!114 &672177295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672177286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eb71a0d2f3b94752afcc38599259a30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RatHygiene
+  hygieneBar: {fileID: 904050725}
+  currentHygiene: 0
+  maxHygiene: 100
 --- !u!1 &860377306
 GameObject:
   m_ObjectHideFlags: 0
@@ -1403,6 +1516,8 @@ RectTransform:
   - {fileID: 1827407661}
   - {fileID: 1589860555}
   - {fileID: 1283312333}
+  - {fileID: 42222946}
+  - {fileID: 904050722}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1410,6 +1525,95 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &904050721
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 904050722}
+  - component: {fileID: 904050724}
+  - component: {fileID: 904050723}
+  - component: {fileID: 904050725}
+  m_Layer: 5
+  m_Name: HygieneFill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &904050722
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904050721}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 8, y: 2, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 860377310}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 2.2044373, y: -206}
+  m_SizeDelta: {x: 68, y: 9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &904050723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904050721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.514151, g: 1, b: 0.97287285, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -5883095937588325545, guid: 399d6e32238f07f499b2aac4109ebc34, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &904050724
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904050721}
+  m_CullTransparentMesh: 1
+--- !u!114 &904050725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904050721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12bace65d7ffb47a8987df34038e7b90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HygieneBar
+  fillImage: {fileID: 904050723}
 --- !u!1 &1041896036
 GameObject:
   m_ObjectHideFlags: 0
@@ -3069,6 +3273,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1981120717}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eb71a0d2f3b94752afcc38599259a30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RatHygiene
+  hygieneBar: {fileID: 904050725}
+  currentHygiene: 0
+  maxHygiene: 100
   m_Script: {fileID: 11500000, guid: 31c14ac5adb30244b998bb729549fd07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AIRatsVisable
