@@ -14,13 +14,14 @@ public class RatInteraction : MonoBehaviour
     private Food nearestFood;
     private bool eating;
     private float eatTimer;
-    //private int cleanliness = 100;
-    //private bool cleaning;
-    //private float cleanTimer;
+    private int cleanliness = 100;
+    private bool cleaning;
+    private float cleanTimer;
 
     public bool IsDead { get { return isDead; } }
     public int PreferredFoodType { get{return preferredFoodType;} }
     public float CurrentHunger {get{return currentHunger;}}
+    public float CurrentCleanliness { get { return cleanliness; } }
 
     void Update()
     {
@@ -33,7 +34,7 @@ public class RatInteraction : MonoBehaviour
         {
             timer -= 0.3f;
             currentHunger--;
-            //cleanliness--;
+            cleanliness--;
         }
 
         // Nearest Food
@@ -63,20 +64,23 @@ public class RatInteraction : MonoBehaviour
             eatTimer = 0f;
         }
 
-        //// Cleaning
-        //if (cleaning)
-        //{
-        //    cleanTimer += Time.deltaTime;
-        //    if (cleanTimer > 0.5f)
-        //        EatFood();
         //}
         //else
         //{
         //    cleanTimer = 0f;
         //}
+        {
+            cleanTimer += Time.deltaTime;
+            if (cleanTimer > 0.5f)
+                EatFood();
+        }
+        else
+        {
+            cleanTimer = 0f;
+        }
 
         // Life check
-        if (currentHunger <= 0)
+        if (currentHunger <= 0 || cleanliness <= 0)
             isDead = true;
     }
 
@@ -128,6 +132,16 @@ public class RatInteraction : MonoBehaviour
             eating = true;
         if (ctx.canceled)
             eating = false;
+    }
+
+    public void Clean(InputAction.CallbackContext ctx)
+    {
+        if (!(inRange && ctx.started || cleaning))
+            return;
+        if (ctx.started)
+            cleaning = true;
+        if (ctx.canceled)
+            cleaning = false;
     }
 
 }
