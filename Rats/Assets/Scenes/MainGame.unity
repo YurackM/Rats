@@ -153,7 +153,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0, y: -206}
+  m_AnchoredPosition: {x: 0, y: -206}
   m_SizeDelta: {x: 82, y: 11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &42222947
@@ -364,6 +364,7 @@ GameObject:
   - component: {fileID: 201137851}
   - component: {fileID: 201137853}
   - component: {fileID: 201137854}
+  - component: {fileID: 201137855}
   m_Layer: 0
   m_Name: P2Rat
   m_TagString: Rat
@@ -570,6 +571,21 @@ MonoBehaviour:
   hungerBar: {fileID: 1595518095}
   currentHunger: 0
   maxHunger: 100
+--- !u!114 &201137855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201137846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eb71a0d2f3b94752afcc38599259a30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RatHygiene
+  hygieneBar: {fileID: 904050725}
+  currentHygiene: 0
+  maxHygiene: 100
 --- !u!1 &212823424
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,6 +946,7 @@ GameObject:
   - component: {fileID: 475543830}
   - component: {fileID: 475543831}
   - component: {fileID: 475543832}
+  - component: {fileID: 475543833}
   m_Layer: 0
   m_Name: AI1Rat
   m_TagString: Rat
@@ -1145,6 +1162,21 @@ MonoBehaviour:
   hungerBar: {fileID: 2098209363}
   currentHunger: 0
   maxHunger: 100
+--- !u!114 &475543833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475543824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eb71a0d2f3b94752afcc38599259a30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RatHygiene
+  hygieneBar: {fileID: 904050725}
+  currentHygiene: 0
+  maxHygiene: 100
 --- !u!1 &672177286
 GameObject:
   m_ObjectHideFlags: 0
@@ -1161,6 +1193,7 @@ GameObject:
   - component: {fileID: 672177292}
   - component: {fileID: 672177293}
   - component: {fileID: 672177294}
+  - component: {fileID: 672177295}
   m_Layer: 0
   m_Name: P1Rat
   m_TagString: Rat
@@ -1367,6 +1400,21 @@ MonoBehaviour:
   hungerBar: {fileID: 458795694}
   currentHunger: 0
   maxHunger: 100
+--- !u!114 &672177295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672177286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eb71a0d2f3b94752afcc38599259a30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RatHygiene
+  hygieneBar: {fileID: 904050725}
+  currentHygiene: 0
+  maxHygiene: 100
 --- !u!1 &860377306
 GameObject:
   m_ObjectHideFlags: 0
@@ -1485,6 +1533,7 @@ GameObject:
   - component: {fileID: 904050722}
   - component: {fileID: 904050724}
   - component: {fileID: 904050723}
+  - component: {fileID: 904050725}
   m_Layer: 5
   m_Name: HygieneFill
   m_TagString: Untagged
@@ -1549,6 +1598,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 904050721}
   m_CullTransparentMesh: 1
+--- !u!114 &904050725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904050721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12bace65d7ffb47a8987df34038e7b90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HygieneBar
+  fillImage: {fileID: 904050723}
 --- !u!1 &1041896036
 GameObject:
   m_ObjectHideFlags: 0
@@ -2983,6 +3045,7 @@ GameObject:
   - component: {fileID: 1981120723}
   - component: {fileID: 1981120724}
   - component: {fileID: 1981120725}
+  - component: {fileID: 1981120726}
   m_Layer: 0
   m_Name: AI2Rat
   m_TagString: Rat
@@ -3198,6 +3261,21 @@ MonoBehaviour:
   hungerBar: {fileID: 212823428}
   currentHunger: 0
   maxHunger: 100
+--- !u!114 &1981120726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981120717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eb71a0d2f3b94752afcc38599259a30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RatHygiene
+  hygieneBar: {fileID: 904050725}
+  currentHygiene: 0
+  maxHygiene: 100
 --- !u!1 &2073292541
 GameObject:
   m_ObjectHideFlags: 0
