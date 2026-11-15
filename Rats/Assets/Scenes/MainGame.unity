@@ -131,6 +131,8 @@ GameObject:
   - component: {fileID: 201137848}
   - component: {fileID: 201137849}
   - component: {fileID: 201137850}
+  - component: {fileID: 201137852}
+  - component: {fileID: 201137851}
   m_Layer: 0
   m_Name: P2Rat
   m_TagString: Untagged
@@ -237,7 +239,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 201137846}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
@@ -254,6 +256,55 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &201137851
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201137846}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.000000029802322, y: 0}
+  m_Radius: 0.245
+--- !u!114 &201137852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201137846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a756d6f5bbaee24abecd34b5f5af57f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RatInteraction
+  preferredFoodType: 0
 --- !u!1 &475543824
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,7 +570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bf07d054da5640409f058c921a2887b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RatMovement
-  speed: 2
+  speed: 8
   tailLength: 5
   parent: {fileID: 1432877087}
 --- !u!50 &672177290
@@ -1039,7 +1090,19 @@ MonoBehaviour:
     m_ActionId: c4dd136e-bb2c-40d7-b207-3864bbb135e3
     m_ActionName: 'Player1/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 672177291}
+        m_TargetAssemblyTypeName: RatInteraction, Assembly-CSharp
+        m_MethodName: Eat
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 77c4d5ca-b12a-41c7-9ab9-c32ca08bd2d2
     m_ActionName: 'Player1/Action1[/Keyboard/c]'
   - m_PersistentCalls:
@@ -1063,7 +1126,19 @@ MonoBehaviour:
     m_ActionId: a8c86b74-15c7-41b3-87c2-f3c08f433190
     m_ActionName: 'Player2/Move[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 201137852}
+        m_TargetAssemblyTypeName: RatInteraction, Assembly-CSharp
+        m_MethodName: Eat
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: f705e206-e008-4072-bf02-9a5fe3f7c5e6
     m_ActionName: 'Player2/Action1[/Keyboard/comma]'
   - m_PersistentCalls:
