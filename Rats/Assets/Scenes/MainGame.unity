@@ -430,6 +430,7 @@ GameObject:
   - component: {fileID: 475543828}
   - component: {fileID: 475543829}
   - component: {fileID: 475543830}
+  - component: {fileID: 475543831}
   m_Layer: 0
   m_Name: AI1Rat
   m_TagString: Rat
@@ -594,6 +595,42 @@ MonoBehaviour:
   spriteRight: {fileID: 3684886580728248886, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
   spriteDown: {fileID: -8521223975913529868, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
   spriteUp: {fileID: 6985044613146471436, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
+--- !u!58 &475543831
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475543824}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.000000029802322, y: 0}
+  m_Radius: 0.245
 --- !u!1 &672177286
 GameObject:
   m_ObjectHideFlags: 0
@@ -1643,6 +1680,7 @@ GameObject:
   - component: {fileID: 1981120721}
   - component: {fileID: 1981120722}
   - component: {fileID: 1981120723}
+  - component: {fileID: 1981120724}
   m_Layer: 0
   m_Name: AI2Rat
   m_TagString: Rat
@@ -1807,6 +1845,42 @@ MonoBehaviour:
   spriteRight: {fileID: 7538499987627416870, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
   spriteDown: {fileID: 8393210268740700682, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
   spriteUp: {fileID: 3075253522793115060, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
+--- !u!58 &1981120724
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981120717}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.000000029802322, y: 0.000000059604645}
+  m_Radius: 0.245
 --- !u!1 &2073292541
 GameObject:
   m_ObjectHideFlags: 0
