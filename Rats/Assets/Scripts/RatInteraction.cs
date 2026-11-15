@@ -27,7 +27,16 @@ public class RatInteraction : MonoBehaviour
 
         if (nearbyFoods.Count > 0)
         {
-
+            foreach (Food f in nearbyFoods)
+            {
+                if (nearestFood == null)
+                    nearestFood = f;
+                else if (Vector2.Distance(transform.position, f.transform.position) < Vector2.Distance(transform.position, nearestFood.transform.position))
+                {
+                    nearestFood = f;
+                    eating = false;
+                }
+            }
         }
 
         if (eating)
@@ -62,6 +71,7 @@ public class RatInteraction : MonoBehaviour
             fullness -= 3;
         }
         Destroy(nearestFood.gameObject);
+        eating = false;
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -81,7 +91,6 @@ public class RatInteraction : MonoBehaviour
     }
 
 
-    // Still fixing
     public void Eat(InputAction.CallbackContext ctx)
     {
         if (!(inRange && ctx.started || eating))
