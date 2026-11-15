@@ -92,6 +92,7 @@ public class RatVisuals : MonoBehaviour
             }
         }
 
+
         if (!dead && GetComponent<RatInteraction>().IsDead == true)
         {
             dead = true;
