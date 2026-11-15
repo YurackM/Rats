@@ -430,6 +430,7 @@ GameObject:
   - component: {fileID: 475543828}
   - component: {fileID: 475543829}
   - component: {fileID: 475543830}
+  - component: {fileID: 475543831}
   m_Layer: 0
   m_Name: AI1Rat
   m_TagString: Rat
@@ -576,10 +577,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RatInteraction
   preferredFoodType: 0
---- !u!58 &475543830
-CircleCollider2D:
 --- !u!114 &475543830
 MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475543824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c54d367674f4c438dcaf5cd001b25f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RatVisuals
+  ratTailKnot: {fileID: 1432877087}
+  ratTail: {fileID: 1295218030}
+  spriteLeft: {fileID: 1863025139830638415, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
+  spriteRight: {fileID: 3684886580728248886, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
+  spriteDown: {fileID: -8521223975913529868, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
+  spriteUp: {fileID: 6985044613146471436, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
+--- !u!58 &475543831
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -614,16 +631,6 @@ MonoBehaviour:
   m_CompositeOrder: 0
   m_Offset: {x: 0.000000029802322, y: 0}
   m_Radius: 0.245
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9c54d367674f4c438dcaf5cd001b25f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RatVisuals
-  ratTailKnot: {fileID: 1432877087}
-  ratTail: {fileID: 1295218030}
-  spriteLeft: {fileID: 1863025139830638415, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
-  spriteRight: {fileID: 3684886580728248886, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
-  spriteDown: {fileID: -8521223975913529868, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
-  spriteUp: {fileID: 6985044613146471436, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
 --- !u!1 &672177286
 GameObject:
   m_ObjectHideFlags: 0
@@ -1673,6 +1680,7 @@ GameObject:
   - component: {fileID: 1981120721}
   - component: {fileID: 1981120722}
   - component: {fileID: 1981120723}
+  - component: {fileID: 1981120724}
   m_Layer: 0
   m_Name: AI2Rat
   m_TagString: Rat
@@ -1818,12 +1826,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a756d6f5bbaee24abecd34b5f5af57f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RatInteraction
-  preferredFoodType: 0
---- !u!58 &1981120723
-CircleCollider2D:
   preferredFoodType: 1
 --- !u!114 &1981120723
 MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981120717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c54d367674f4c438dcaf5cd001b25f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RatVisuals
+  ratTailKnot: {fileID: 1432877087}
+  ratTail: {fileID: 1356402075}
+  spriteLeft: {fileID: -4597909548125520073, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
+  spriteRight: {fileID: 7538499987627416870, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
+  spriteDown: {fileID: 8393210268740700682, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
+  spriteUp: {fileID: 3075253522793115060, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
+--- !u!58 &1981120724
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1858,16 +1881,6 @@ MonoBehaviour:
   m_CompositeOrder: 0
   m_Offset: {x: 0.000000029802322, y: 0.000000059604645}
   m_Radius: 0.245
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9c54d367674f4c438dcaf5cd001b25f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RatVisuals
-  ratTailKnot: {fileID: 1432877087}
-  ratTail: {fileID: 1356402075}
-  spriteLeft: {fileID: -4597909548125520073, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
-  spriteRight: {fileID: 7538499987627416870, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
-  spriteDown: {fileID: 8393210268740700682, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
-  spriteUp: {fileID: 3075253522793115060, guid: 9a0a2d95609db9c428b9ca9bf8b6e881, type: 3}
 --- !u!1 &2073292541
 GameObject:
   m_ObjectHideFlags: 0
