@@ -112620,6 +112620,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1546534614}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 --- !u!1 &1581188338
 GameObject:
   m_ObjectHideFlags: 0
@@ -112665,6 +112666,8 @@ Transform:
   - {fileID: 192884113}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> parent of 5c85d84 (Dead)
 --- !u!1 &1589860554
 GameObject:
   m_ObjectHideFlags: 0
