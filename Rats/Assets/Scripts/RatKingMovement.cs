@@ -1,5 +1,6 @@
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RatKingMovement : MonoBehaviour
 {
@@ -30,7 +31,8 @@ public class RatKingMovement : MonoBehaviour
     {
         int aliveCount = 0;
 
-        foreach (GameObject r in rats){
+        foreach (GameObject r in rats)
+        {
             if (!r.GetComponent<RatInteraction>().IsDead)
             {
                 aliveCount++;
@@ -39,22 +41,33 @@ public class RatKingMovement : MonoBehaviour
                     move = true;
                 }
             }
-        foreach(GameObject ai in aiRats){
-                if (ai.GetComponent<Agent>().isAtEnd && !ai.GetComponent<RatInteraction>().IsDead)
-                    {
-                        move = true;
-                    }
         }
-        if(move){
+        foreach(GameObject ai in aiRats)
+        {
+            if (ai.GetComponent<Agent>().isAtEnd && !ai.GetComponent<RatInteraction>().IsDead)
+            {
+                move = true;
+            }
+        }
+        if(move)
+        {
             Movement();
             move = false;
         }
+
+        if (aliveCount == 0)
+        {
+            SceneManager.LoadScene("Game Over");
+        }
     }
 
-    public void Movement(){
+    public void Movement()
+    {
         Vector3 averageDirection = new Vector3();
-        foreach(GameObject r in rats){
-            if(r.GetComponent<RatMovement>().isAtEnd){
+        foreach(GameObject r in rats)
+        {
+            if(r.GetComponent<RatMovement>().isAtEnd)
+            {
                 averageDirection += r.GetComponent<RatMovement>().direction;
             }
         }
