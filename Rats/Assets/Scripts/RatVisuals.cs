@@ -8,11 +8,14 @@ public class RatVisuals : MonoBehaviour
     [SerializeField] Sprite spriteRight;
     [SerializeField] Sprite spriteDown;
     [SerializeField] Sprite spriteUp;
+    [SerializeField] GameObject blood;
     SpriteRenderer spriteRend;
+    bool dead;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        dead = false;
         spriteRend = GetComponent<SpriteRenderer>();
     }
 
@@ -87,6 +90,13 @@ public class RatVisuals : MonoBehaviour
                 Quaternion rotationNeeded = Quaternion.FromToRotation(angleFacing, transform.localPosition.normalized);
                 ratTail.transform.rotation = rotationNeeded * ratTail.transform.rotation;
             }
+        }
+
+        if (!dead && GetComponent<RatInteraction>().IsDead == true)
+        {
+            dead = true;
+            blood.SetActive(true);
+            spriteRend.flipY = true;
         }
     }
 }

@@ -1,5 +1,7 @@
-using UnityEngine;
 using System.Collections.Generic;
+using Unity.VectorGraphics;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RatKingMovement : MonoBehaviour
 {
@@ -28,19 +30,32 @@ public class RatKingMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        int aliveCount = 0;
         foreach(GameObject r in rats){
-            if(r.GetComponent<RatMovement>().isAtEnd){
-                move = true;
+            if (!r.GetComponent<RatInteraction>().IsDead)
+            {
+                aliveCount++;
+                if (r.GetComponent<RatMovement>().isAtEnd)
+                {
+                    move = true;
+                }
             }
+            
         }
         foreach(GameObject ai in aiRats){
-            if(ai.GetComponent<Agent>().isAtEnd){
+            if(ai.GetComponent<Agent>().isAtEnd && !ai.GetComponent<RatInteraction>().IsDead)
+            {
                 move = true;
             }
         }
         if(move){
             Movement();
             move = false;
+        }
+
+        if(aliveCount == 0)
+        {
+            SceneManager.LoadScene("Game Over");
         }
     }
 
