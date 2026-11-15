@@ -25,7 +25,7 @@ public class RatMovement : MonoBehaviour
     {
         velocity = direction * speed;
         newPosition = transform.position + (velocity * Time.fixedDeltaTime);
-        Debug.Log(Vector3.Distance(newPosition, parent.transform.position));
+        //Debug.Log(Vector3.Distance(newPosition, parent.transform.position));
         if (Vector3.Distance(newPosition, parent.transform.position) < tailLength){          
             rat.MovePosition(newPosition);
             isAtEnd = false;
