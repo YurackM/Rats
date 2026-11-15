@@ -7,7 +7,7 @@ public class CameraTracker : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        screenBounds.y = Camera.main.orthographicSize / 2;
+        screenBounds.y = Camera.main.orthographicSize / 4;
         screenBounds.x = (screenBounds.y * Camera.main.aspect);
         screenBounds.z = -10;
     }

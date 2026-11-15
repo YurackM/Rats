@@ -15,7 +15,8 @@ public class AIRats : Agent
        List<GameObject> foods = foodspawn.foodList;
        List<GameObject> ratFood = new List<GameObject>();
        foreach(GameObject f in foods){
-            if(f.GetComponent<Food>().FoodType == gameObject.GetComponent<RatInteraction>().PreferredFoodType){
+            if(f.GetComponent<Food>().FoodType == gameObject.GetComponent<RatInteraction>().PreferredFoodType || f.GetComponent<Food>().FoodType == 4)
+            {
                if(f.transform.position.x > -screenHalfSize.x + transform.position.x &&
                    f.transform.position.x < screenHalfSize.x + transform.position.x &&
                    f.transform.position.y < screenHalfSize.y + transform.position.y &&
