@@ -112711,7 +112711,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FoodSpawn
   foodPrefab: {fileID: 3179854311050979378, guid: d8a535ad4c7d5914a8dd533ef51270e2, type: 3}
-  foodSpawnCount: 100
+  foodSpawnCount: 200
   cheese: {fileID: 1194620263, guid: 12a1b330f6d2ee4498cab31225bdb736, type: 3}
   apple: {fileID: 3983405018662690971, guid: 12a1b330f6d2ee4498cab31225bdb736, type: 3}
   pickle: {fileID: -1478508477, guid: 12a1b330f6d2ee4498cab31225bdb736, type: 3}
