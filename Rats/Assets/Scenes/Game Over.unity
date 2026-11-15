@@ -1090,7 +1090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c20f0cba54752d94f9729b8363c40c49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneSwap
-  sceneName: MainGame
+  sceneName: TitleScene
   sceneNum: 0
 --- !u!1 &2056897076
 GameObject:
