@@ -1,10 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class RatInteraction : MonoBehaviour
 {
-    [SerializeField]
+    [SerializeField] Image fillFood;
     private int preferredFoodType;
     private float timer = 0f;
     private bool inEatingRange;
@@ -24,6 +25,7 @@ public class RatInteraction : MonoBehaviour
     public int PreferredFoodType { get{return preferredFoodType;} }
     public float CurrentHunger {get{return currentHunger;}}
     public float CurrentCleanliness { get { return cleanliness; } }
+    public float EatTimer{get{return eatTimer;}}
 
     void Start()
     {
@@ -63,11 +65,15 @@ public class RatInteraction : MonoBehaviour
         if (eating)
         {
             eatTimer += Time.deltaTime;
-            if (eatTimer > 1f)
+            fillFood.enabled = true;
+            if (eatTimer > 1f){
                 EatFood();
+                fillFood.enabled = false;
+            }
         }
         else
         {
+            //fillFood.enabled = false;
             eatTimer = 0f;
         }
 
@@ -148,6 +154,7 @@ public class RatInteraction : MonoBehaviour
         }
         Destroy(nearestFood.gameObject);
         eating = false;
+
     }
 
     private void CleanRat()
